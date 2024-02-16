@@ -1,0 +1,17 @@
+services:
+    app:
+        build: .
+        container_name: mml_project
+        env_file:
+            - .env
+        command: sleep infinity
+        volumes:
+            - .:/code
+        
+# build: . - specify that we want to build from the local Dockerfile
+# to run - we need to just run 1 command: docker compose up
+
+# adding redis as a database or as a cache
+# https://hub.docker.com/_/redis
+# depends_on  -> meaning starting will finish only  after mounting all images
+

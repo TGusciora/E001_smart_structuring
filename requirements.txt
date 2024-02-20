@@ -7,9 +7,18 @@ Sphinx  # https://www.sphinx-doc.org/en/master/
 coverage  # https://coverage.readthedocs.io/en/
 flake8  # https://flake8.pycqa.org/en/latest/
 python-dotenv>=0.5.1  # https://pypi.org/project/python-dotenv/
+pyprojroot  # for src.utils.paths
 
 # basic packages
 numpy
 pandas
 matplotlib
 seaborn
+
+
+# packages for smooth docker dev environment run in VS Code
+IPython
+jupyter_client
+jupyter_core
+jupyterlab
+notebook

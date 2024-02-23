@@ -15,6 +15,12 @@ pandas
 matplotlib
 seaborn
 
+# packages for our analysis
+plotly
+prophet
+ipywidgets
+notebook
+scikit-learn
 
 # packages for smooth docker dev environment run in VS Code
 IPython

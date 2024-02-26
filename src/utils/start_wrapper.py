@@ -1,23 +1,3 @@
-"""
-Importing packages used in the project.
-
-Basic packages: pandas, numpy, matplotlib
-Project specific: scikit-learn, seaborn, prophet
-"""
-#  basic packages
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import dotenv
-import os
-
-# project specific packages
-import seaborn as sns
-import sklearn as sk
-import urllib.request
-import datetime as dt
-from prophet import Prophet
-
 def wrapper_notebook_settings():
     """
     Enabling autoreload and inline plotting in Jupyter notebooks.

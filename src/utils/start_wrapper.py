@@ -1,3 +1,5 @@
+# Why no imported packages here? Because of pylint -> would underline them in main ipynb
+
 def wrapper_notebook_settings():
     """
     Enabling autoreload and inline plotting in Jupyter notebooks.

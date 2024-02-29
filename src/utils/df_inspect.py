@@ -6,7 +6,7 @@ class DataFrameInspector():
     A utility class for inspecting and analyzing pandas DataFrames.
     """
 
-    def __init__(self, df):
+    def __init__(self, df : object):
         self.df = df
         self._get_dataframe_info()
         self._get_dataframe_head()

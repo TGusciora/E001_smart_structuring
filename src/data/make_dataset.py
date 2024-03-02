@@ -17,4 +17,5 @@ def stooqData(ticker: str):
     data['date'] = pd.to_datetime(data['date'])
     return data
 
-# if you're reading this carved out in stone in front of a cave, I am sorry. You have to be connected to the Internet to download data from the web.
+# if you're reading this carved out in stone in front of a cave, I am sorry. 
+# You have to be connected to the Internet to download data from the web.

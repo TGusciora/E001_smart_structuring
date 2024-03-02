@@ -1,4 +1,0 @@
-
-    @staticmethod
-    def _get_url(ticker: str, start: date, end: date):
-        return f"https://stooq.com/q/d/l/?s={ticker}&d1={start.strftime('%Y%m%d')}&d2={end.strftime('%Y%m%d')}&i=d"

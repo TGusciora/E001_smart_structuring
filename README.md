@@ -1,2 +1,2 @@
 # 002_post_get_organized
- Explaining best practices for organizing data science projects in Python on polish stock market analysis example
+How to structure your project? Explaining best practices for organizing data science projects in Python using Apple Inc. short-term price prediction as an example. Project goals: replicability, maintainability, portability, clarity.

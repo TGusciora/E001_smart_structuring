@@ -4,6 +4,11 @@ FROM python:3.11-slim
 # set the working directory
 WORKDIR /app
 
+# install system dependencies
+RUN apt-get update && apt-get install -y \
+    libnuma-dev \
+    && rm -rf /var/lib/apt/lists/*
+
 # install dependencies
 COPY ./requirements.txt ./
 COPY ./setup.py ./

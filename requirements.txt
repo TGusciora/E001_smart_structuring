@@ -24,6 +24,10 @@ ipywidgets
 notebook
 scikit-learn
 
+# sastest
+# numa
+swat
+
 # packages for smooth docker dev environment run in VS Code
 IPython
 jupyter_client

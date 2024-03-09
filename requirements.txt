@@ -14,8 +14,11 @@ numpy
 pandas
 matplotlib
 seaborn
+setuptools
+
 # clean-code
-black 
+black
+pre-commit
 
 # packages for our analysis
 plotly

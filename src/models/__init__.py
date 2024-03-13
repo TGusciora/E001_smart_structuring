@@ -1,3 +1,3 @@
 # import modules
-import predict_model
-import train_model
+import src.models.predict_model
+import src.models.train_model

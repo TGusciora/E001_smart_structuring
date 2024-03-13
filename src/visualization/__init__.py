@@ -1,2 +1,2 @@
 # import modules
-import visualize
+import src.visualization.visualize

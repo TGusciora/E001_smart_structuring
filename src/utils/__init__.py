@@ -1,4 +1,4 @@
 # import modules
-import df_inspect
-import paths
-import start_wrapper
+import src.utils.df_inspect
+import src.utils.paths
+import src.utils.start_wrapper

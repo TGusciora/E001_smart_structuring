@@ -1,11 +1,19 @@
-# Why no imported packages here? Because of pylint -> would underline them in main ipynb
-
 def wrapper_notebook_settings():
     """
-    Enabling autoreload and inline plotting in Jupyter notebooks.
+    Configures settings specific to IPython/Jupyter notebooks.
 
-    Autoreload causes modules to be reloaded each time before execution.
-    This saves time on re-importing the package after each change.
+    This function checks if the code is running in an IPython/Jupyter notebooks session.
+    If it is, it enables autoreloading of modules, sets matplotlib to inline mode.
+    If it is not, it prints a message indicating that it is not in a notebooks session.
+    
+    Note:
+        - This function requires the IPython, matplotlib, pandas module to be installed.
+
+    Raises:
+        None
+
+    Returns:
+        None
     """
     try:
         __IPYTHON__
@@ -19,4 +27,3 @@ def wrapper_notebook_settings():
         get_ipython().run_line_magic("matplotlib", "inline")
     else:
         print("Not in IPython/Jupyter notebooks session")
-    

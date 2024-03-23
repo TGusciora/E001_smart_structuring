@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
 import pandas as pd
 
-def stooqData(ticker: str):
+def stooq_import(ticker: str):
     """
     Fetches historical stock data from Stooq for a given ticker.
 
@@ -18,4 +17,4 @@ def stooqData(ticker: str):
     return data
 
 # if you're reading this carved out in stone in front of a cave, I am sorry. 
-# You have to be connected to the Internet to download data from the web.
+# You have to be connected to the Internet to download data.

@@ -8,13 +8,13 @@ class DataFrameInspector():
 
     def __init__(self, df : object):
         self.df = df
-        self._get_dataframe_info()
-        self._get_dataframe_head()
-        self._get_dataframe_tail()
-        self._get_dataframe_shape()
-        self._identify_primary_key()
+        self.__get_dataframe_shape()
+        self.__identify_primary_key()
+        self.__get_dataframe_info()
+        self.__get_dataframe_head()
+        self.__get_dataframe_tail()
 
-    def _get_dataframe_info(self):
+    def __get_dataframe_info(self):
         """
         Prints information about the DataFrame, including column names, non-null counts, and data types.
         """
@@ -22,7 +22,7 @@ class DataFrameInspector():
         print(self.df.info(),'\n')
         return None
 
-    def _get_dataframe_head(self, n=5):
+    def __get_dataframe_head(self, n=5):
         """
         Prints the first n rows of the DataFrame.
         """
@@ -30,7 +30,7 @@ class DataFrameInspector():
         print(self.df.head(n),'\n')
         return None
 
-    def _get_dataframe_tail(self, n=5):
+    def __get_dataframe_tail(self, n=5):
         """
         Prints the last n rows of the DataFrame.
         """
@@ -38,7 +38,7 @@ class DataFrameInspector():
         print(self.df.tail(n),'\n')
         return None
 
-    def _get_dataframe_shape(self):
+    def __get_dataframe_shape(self):
         """
         Prints the number of rows and columns in the DataFrame.
         """
@@ -46,7 +46,7 @@ class DataFrameInspector():
         print(f"The DataFrame has {rows} rows and {cols} columns.\n")
         return None
 
-    def _identify_primary_key(self):
+    def __identify_primary_key(self):
         """
         Identifies the primary key column(s) in the DataFrame, if any.
         """

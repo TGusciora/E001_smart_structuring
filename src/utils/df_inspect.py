@@ -1,12 +1,9 @@
-import pandas as pd
-
-
-class DataFrameInspector():
+class DataFrameInspector:
     """
     A utility class for inspecting and analyzing pandas DataFrames.
     """
 
-    def __init__(self, df : object):
+    def __init__(self, df: object):
         self.df = df
         self.__get_dataframe_shape()
         self.__identify_primary_key()
@@ -19,7 +16,7 @@ class DataFrameInspector():
         Prints information about the DataFrame, including column names, non-null counts, and data types.
         """
         print("DataFrame Info:")
-        print(self.df.info(),'\n')
+        print(self.df.info(), "\n")
         return None
 
     def __get_dataframe_head(self, n=5):
@@ -27,7 +24,7 @@ class DataFrameInspector():
         Prints the first n rows of the DataFrame.
         """
         print(f"First {n} Rows of the DataFrame:")
-        print(self.df.head(n),'\n')
+        print(self.df.head(n), "\n")
         return None
 
     def __get_dataframe_tail(self, n=5):
@@ -35,7 +32,7 @@ class DataFrameInspector():
         Prints the last n rows of the DataFrame.
         """
         print(f"Last {n} Rows of the DataFrame:")
-        print(self.df.tail(n),'\n')
+        print(self.df.tail(n), "\n")
         return None
 
     def __get_dataframe_shape(self):

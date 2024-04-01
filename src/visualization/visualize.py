@@ -1,13 +1,12 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 from sklearn import metrics as sk_metrics
 
-import matplotlib.pyplot as plt
-import pandas as pd
 
 def prophet_plot_forecast(data: pd.DataFrame, title: str, obs: int = 5, y_start_0: int = 1, ax=None):
     """
-    Plots the actual and predicted stock prices using Prophet forecasting model.
+    Plots the actual and predicted stock prices using Prophet (Hi Mark) forecasting model.
 
     Parameters:
     - data (pandas.DataFrame): The dataframe containing the stock price data.

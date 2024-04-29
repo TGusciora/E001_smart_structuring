@@ -8,6 +8,5 @@ services:
         volumes:
             - .:/app
         
-# build: . - specify that we want to build from the local Dockerfile
-# to run - we need to just run 1 command: docker compose up
-
+# build: . - specifies that you want to build from the local Dockerfile
+# to run, you need to execute a single command: docker compose up

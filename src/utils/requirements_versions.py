@@ -1,4 +1,5 @@
 import os
+
 import pkg_resources
 
 
@@ -16,7 +17,9 @@ def requirements_versions(output_file="requirements_versions.txt"):
     Raises:
     None
     """
-    source_requirements = os.path.join(os.path.dirname(os.getcwd()), "requirements.txt")
+    source_requirements = os.path.join(
+        os.path.dirname(os.getcwd()), "requirements.txt"
+    )
     output_file = os.path.join(os.getcwd(), output_file)
     requirements = []
 
@@ -33,21 +36,27 @@ def requirements_versions(output_file="requirements_versions.txt"):
                 continue
 
             # Split line at the first occurrence of '==' or ' ' or comments to handle version specifiers or options
-            package_part = clean_line.split("==")[0].split(" ")[0].split("#")[0].strip()
+            package_part = (
+                clean_line.split("==")[0].split(" ")[0].split("#")[0].strip()
+            )
             if package_part:
                 try:
                     # Retrieve the installed version of the package
-                    version = pkg_resources.get_distribution(package_part).version
+                    version = pkg_resources.get_distribution(
+                        package_part
+                    ).version
                     # Append the package and its installed version
                     requirements.append(f"{package_part}=={version}")
                 except pkg_resources.DistributionNotFound:
                     print(f"Package {package_part} not found. Skipping...")
             else:
-                # This handles the case where there's a comment after an empty package name
+                # This handles the case where there's a comment after an empty
+                # package name
                 if clean_line.endswith("#"):
                     requirements.append(clean_line)
 
-    # Write the requirements to the output file, including comments, editable installs, and blank lines
+    # Write the requirements to the output file, including comments, editable
+    # installs, and blank lines
     with open(output_file, "w") as f:
         for requirement in requirements:
             # Preserve blank lines in the output file

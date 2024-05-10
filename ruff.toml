@@ -28,8 +28,8 @@ exclude = [
     "venv",
 ]
 
-# Same as Black.
-line-length = 88
+# Adhering to Python PEP 8 guidelines
+line-length = 79
 indent-width = 4
 
 extend-include = ["*.ipynb"]
@@ -38,7 +38,7 @@ extend-include = ["*.ipynb"]
 # Enable Pyflakes (`F`) and a subset of the pycodestyle (`E`)  codes by default.
 # Unlike Flake8, Ruff doesn't enable pycodestyle warnings (`W`) or
 # McCabe complexity (`C901`) by default.
-select = ["E4", "E7", "E9", "F"]
+select = ["E1", "E4", "E5", "E7", "E9", "F", "W", "I", "N"]
 ignore = ["E402","F401"]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.
@@ -73,7 +73,7 @@ docstring-code-format = true
 #
 # This only has an effect when the `docstring-code-format` setting is
 # enabled.
-docstring-code-line-length = "dynamic"
+docstring-code-line-length = 79
 
 
 

@@ -4,7 +4,9 @@ import pandas as pd
 from sklearn import metrics as sk_metrics
 
 
-def prophet_plot_forecast(data: pd.DataFrame, title: str, obs: int = 5, y_start_0: int = 1, ax=None):
+def prophet_plot_forecast(
+    data: pd.DataFrame, title: str, obs: int = 5, y_start_0: int = 1, ax=None
+):
     """
     Plots the actual and predicted stock prices using Prophet (Hi Mark) forecasting model.
 
@@ -21,19 +23,35 @@ def prophet_plot_forecast(data: pd.DataFrame, title: str, obs: int = 5, y_start_
     if ax is None:
         fig, ax = plt.subplots(figsize=(12, 6))
 
-    ax.plot(data["ds"][-5 * obs :], data["y"][-5 * obs :], label="Actual Stock Price", color="blue")
-    ax.plot(data["ds"][-5 * obs :], data["yhat"][-5 * obs :], label="Predicted Stock Price", color="orange")
+    ax.plot(
+        data["ds"][-5 * obs :],
+        data["y"][-5 * obs :],
+        label="Actual Stock Price",
+        color="blue",
+    )
+    ax.plot(
+        data["ds"][-5 * obs :],
+        data["yhat"][-5 * obs :],
+        label="Predicted Stock Price",
+        color="orange",
+    )
 
-    ax.fill_between(data["ds"][-obs:], data["yhat_lower"][-obs:], data["yhat_upper"][-obs:], color="gray", alpha=0.3)
-    
+    ax.fill_between(
+        data["ds"][-obs:],
+        data["yhat_lower"][-obs:],
+        data["yhat_upper"][-obs:],
+        color="gray",
+        alpha=0.3,
+    )
+
     ax.set_xlabel("Date")
     ax.set_ylabel("Stock Price")
     ax.set_title(title)
-    ax.legend(loc='lower left')
-    
+    ax.legend(loc="lower left")
+
     if y_start_0 == 1:
         ax.set_ylim(bottom=0)
-    
+
     if ax is None:  # Show the plot only if this function created the figure
         plt.show()
 
@@ -50,15 +68,17 @@ def prophet_plot_forecast_dual(data: pd.DataFrame, title: str, obs: int = 5):
     fig, axs = plt.subplots(1, 2, figsize=(24, 6))
 
     # First subplot in default scale
-    prophet_plot_forecast(data, title + " (default scale)", obs, y_start_0=0, ax=axs[0])
+    prophet_plot_forecast(
+        data, title + " (default scale)", obs, y_start_0=0, ax=axs[0]
+    )
 
     # Second subplot with Y axis starting from 0
-    prophet_plot_forecast(data, title + " (true scale)", obs, y_start_0=1, ax=axs[1])
+    prophet_plot_forecast(
+        data, title + " (true scale)", obs, y_start_0=1, ax=axs[1]
+    )
 
     plt.tight_layout()
     plt.show()
-
-
 
 
 def plot_forecast_error(

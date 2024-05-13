@@ -13,7 +13,8 @@ class DataFrameInspector:
 
     def __get_dataframe_info(self):
         """
-        Prints information about the DataFrame, including column names, non-null counts, and data types.
+        Prints information about the DataFrame, including column names,
+        non-null counts, and data types.
         """
         print("DataFrame Info:")
         print(self.df.info(), "\n")

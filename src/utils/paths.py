@@ -29,7 +29,8 @@ def paths_dictionary():
 
         for dir in dirs:
             folder_path = os.path.join(root, dir) + "/"
-            # Adding dictionary keys, replacing separators to "_" and deleting paths before parent
+            # Adding dictionary keys, replacing separators to "_" and
+            # deleting paths before parent
             dict_key = (
                 folder_path.replace(parent_path, "")
                 .strip(os.sep)

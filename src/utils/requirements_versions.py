@@ -5,8 +5,10 @@ import pkg_resources
 
 def requirements_versions(output_file="requirements_versions.txt"):
     """
-    Generates a custom requirements.txt file with versions for packages listed in a given requirements file.
-    Directly includes comments, editable installs, and blank lines. Replaces any existing version specifier with the installed version.
+    Generates a custom requirements.txt file with versions for packages
+    listed in a given requirements file. Directly includes comments,
+    editable installs, and blank lines. Replaces any existing version
+    specifier with the installed version.
 
     Args:
     - output_file (str): Path to the output requirements_versions.txt file.
@@ -35,7 +37,8 @@ def requirements_versions(output_file="requirements_versions.txt"):
                 requirements.append(clean_line)
                 continue
 
-            # Split line at the first occurrence of '==' or ' ' or comments to handle version specifiers or options
+            # Split line at the first occurrence of '==' or ' ' or
+            # comments to handle version specifiers or options
             package_part = (
                 clean_line.split("==")[0].split(" ")[0].split("#")[0].strip()
             )

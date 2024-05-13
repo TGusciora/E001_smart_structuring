@@ -26,12 +26,14 @@ exclude = [
     "node_modules",
     "site-packages",
     "venv",
+    "setup.py"
 ]
 
 # Adhering to Python PEP 8 guidelines
 line-length = 79
 indent-width = 4
 
+# Formatting Jupyter notebooks as well
 extend-include = ["*.ipynb"]
 
 [lint]
@@ -74,8 +76,3 @@ docstring-code-format = true
 # This only has an effect when the `docstring-code-format` setting is
 # enabled.
 docstring-code-line-length = 79
-
-
-
-
-

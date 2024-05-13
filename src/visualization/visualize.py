@@ -8,14 +8,17 @@ def prophet_plot_forecast(
     data: pd.DataFrame, title: str, obs: int = 5, y_start_0: int = 1, ax=None
 ):
     """
-    Plots the actual and predicted stock prices using Prophet (Hi Mark) forecasting model.
+    Plots the actual and predicted stock prices using Prophet (Hi Mark)
+    forecasting model.
 
     Parameters:
     - data (pandas.DataFrame): The dataframe containing the stock price data.
     - title (str): The title of the plot.
     - obs (int): The number of observations to consider for plotting.
-    - y_start_0 (int): If set to 1, Y axis starts with 0. If set to 0, use default axis values.
-    - ax (matplotlib.axes.Axes, optional): The axes on which to plot. If None, uses current axes.
+    - y_start_0 (int): If set to 1, Y axis starts with 0. If set to 0,
+    use default axis values.
+    - ax (matplotlib.axes.Axes, optional): The axes on which to plot.
+    If None, uses current axes.
 
     Returns:
     None
@@ -58,7 +61,8 @@ def prophet_plot_forecast(
 
 def prophet_plot_forecast_dual(data: pd.DataFrame, title: str, obs: int = 5):
     """
-    Creates a figure with two subplots: the first in default scale, and the second with Y axis starting from 0.
+    Creates a figure with two subplots: the first in default scale, and the
+    second with Y axis starting from 0.
 
     Parameters:
     - data (pandas.DataFrame): The dataframe containing the stock price data.
@@ -90,7 +94,8 @@ def plot_forecast_error(
     Parameters:
     data (object): The dataset containing the actual and predicted values.
     title (str): The title of the plot.
-    savefig (bool, optional): Whether to save the plot as an image. Defaults to True.
+    savefig (bool, optional): Whether to save the plot as an image.
+    Defaults to True.
 
     Returns:
     None

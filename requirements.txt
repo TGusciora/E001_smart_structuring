@@ -17,7 +17,7 @@ pre-commit==3.6.2
 prophet==1.1.5
 scikit-learn==1.4.1.post1
 
-# For Prophet plots - not used in project
+# For Prophet (Hi Mark) plots - not used in project
 ipywidgets==8.1.2
 plotly==5.20.0
 
